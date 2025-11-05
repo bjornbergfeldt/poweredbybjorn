@@ -123,7 +123,7 @@ export function BlogPostPage() {
 								{post.tags.map((tag, idx) => (
 									<span 
 										key={idx}
-										className="px-2 py-1 rounded-md bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+										className="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
 									>
 										{tag}
 									</span>

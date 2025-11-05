@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	html {
+		scrollbar-gutter: stable;
+	}
+}
+
 /* Minimal layout primitives */
 .container {
 	@apply mx-auto max-w-7xl px-4;

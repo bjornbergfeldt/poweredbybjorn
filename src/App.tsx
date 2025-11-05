@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { BlogListPage } from './pages/BlogListPage';
 import { BlogPostPage } from './pages/BlogPostPage';
+import { AboutPage } from './pages/AboutPage';
 import { useEffect, useState } from 'react';
 import { BsMoonFill, BsSunFill, BsLinkedin } from 'react-icons/bs';
 import { Logo } from './components/Logo';
@@ -42,6 +43,7 @@ export default function App() {
 				<Routes>
 					<Route path="/" element={<BlogListPage />} />
 					<Route path="/post/:slug" element={<BlogPostPage />} />
+					<Route path="/about" element={<AboutPage />} />
 					<Route path="*" element={<div>Not Found</div>} />
 				</Routes>
 			</main>

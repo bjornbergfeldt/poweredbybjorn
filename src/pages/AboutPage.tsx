@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 
 export function AboutPage() {
 	return (
-		<div className="prose dark:prose-invert max-w-none">
+		<div className="prose dark:prose-invert max-w-3xl mx-auto">
 			<Link to="/" className="text-sm text-neutral-500 mb-6 inline-block">
-				← Back to articles
+				← Back
 			</Link>
 			
 			<h1>About Me</h1>

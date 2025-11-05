@@ -59,8 +59,14 @@ export function BlogListPage() {
 						Powered by Björn
 					</h1>
 					<p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-						Power Platform, AI, and Data — modern insights and practical guides.
+						Curiosity-driven. Experiment-focused. Insight-packed. Exploring Power Platform, AI, and Data, one idea at a time.
 					</p>
+					<Link 
+						to="/about" 
+						className="inline-block text-lg font-medium bg-gradient-to-br from-[#0E6BC8] from-30% via-[#9763D2] to-[#9763D2] dark:from-[#0E6BC8] dark:from-30% dark:via-[#9763D2] dark:to-[#9763D2] bg-clip-text text-transparent hover:scale-105 transition-transform duration-200 mt-4 cursor-pointer"
+					>
+						Who am I?
+					</Link>
 				</div>
 			</div>
 
