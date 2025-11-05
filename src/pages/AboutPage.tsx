@@ -11,10 +11,12 @@ export function AboutPage() {
 			
 			<div className="space-y-6">
 				<p className="text-lg text-neutral-700 dark:text-neutral-300">
-					Hey👋 I’m <strong>Björn Bergfeldt</strong>. I live in Sweden and work as a consultant at Sopra Steria, where I get to solve real-world problems using Power Platform, AI, and Data. I love exploring these tools not just as technologies, but as ways to make work and life a little smarter and more efficient.
+					Hey👋 I’m <strong>Björn Bergfeldt</strong>. I live in Stockholm, Sweden and work as a consultant at Sopra Steria, 
+					where I get to solve real-world problems using Power Platform, AI, and Data. 
+					I love learning and experimenting with technology, finding ways to make everyday work smarter and help others achieve more.
 				</p>
 				<p className="text-lg text-neutral-700 dark:text-neutral-300">
-					On this blog, I share what I’m learning, experimenting with, and my key lessons along the way.
+					On this blog, I share what I’m currently learning, experimenting with, and my key lessons along the way.
 				</p>
 				
 				<section>

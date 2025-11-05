@@ -12,6 +12,15 @@ import { visit } from 'unist-util-visit';
 import type { Root, Paragraph, Image } from 'mdast';
 import { author } from '@/config/author';
 
+// Format date as yyyy-mm-dd
+function formatDate(date: string): string {
+	const d = new Date(date);
+	const year = d.getFullYear();
+	const month = String(d.getMonth() + 1).padStart(2, '0');
+	const day = String(d.getDate()).padStart(2, '0');
+	return `${year}-${month}-${day}`;
+}
+
 // Helper function to fix image paths for GitHub Pages base path
 function fixImagePath(src: string | undefined): string {
 	if (!src) return '';
@@ -120,11 +129,7 @@ export function BlogPostPage() {
 					
 					<time dateTime={post.date} className="flex items-center gap-1">
 						<Calendar className="w-4 h-4" />
-						{new Date(post.date).toLocaleDateString('en-US', { 
-							year: 'numeric', 
-							month: 'long', 
-							day: 'numeric' 
-						})}
+						{formatDate(post.date)}
 					</time>
 					
 					{post.tags && post.tags.length > 0 && (

@@ -1,24 +1,16 @@
 ---
-title: Hello, World for Power Platform, AI, and Data
+title: Low-Code is Evolving and the Future is Generative
 description: Kicking off the blog with goals and tech stack.
-date: 2025-01-20
-tags: [power platform, copilot studio, power apps, power automate, power bi]
+date: 2025-11-05
+tags: [power platform, generative ai]
 image: /images/copilotstudioinspiration.png
 ---
 
-Welcome to the blog! This space focuses on Power Platform, AI, and Data.
+Low-code has been a game-changer for building solutions quickly and efficiently. But the way we think about low-code is changing. The future is leaning heavily into **natural language, generative AI, and code generation**, allowing us to describe what we want and letting the system do the heavy lifting.
 
-## What to expect
+Is Power Platform obsolete because of this? **Absolutely not.** If anything, it’s positioned better than most platforms to ride this wave. Low-code isn’t disappearing. It’s **evolving**, moving toward an **AI and agent-driven platform**, where solutions become smarter, more autonomous, and more intuitive to build.
 
-- Practical Power Platform solutions
-- AI integration patterns
-- Data engineering and analytics tips
+I’ve been diving deep into generative AI in the Power Platform and Microsoft space lately, exploring how generative AI can accelerate app building, automations, and agentic solutions. And honestly, this feels just like the beginning. There’s **so much more to come**, and the possibilities for transforming work are huge.
 
-![Description of the image](/images/my-image.png)
-
-```tsx
-export function hello(name: string) {
-  return `Hello ${name}!`;
-}
-```
+If you’re curious about the intersection of **low-code, AI, and the next generation of solutions**, this is a space to watch closely and experiment boldly.
 

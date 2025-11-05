@@ -26,6 +26,15 @@ function calculateReadingTime(content: string): number {
 	return Math.ceil(words / 200);
 }
 
+// Format date as yyyy-mm-dd
+function formatDate(date: string): string {
+	const d = new Date(date);
+	const year = d.getFullYear();
+	const month = String(d.getMonth() + 1).padStart(2, '0');
+	const day = String(d.getDate()).padStart(2, '0');
+	return `${year}-${month}-${day}`;
+}
+
 export function BlogListPage() {
 	const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
 
@@ -124,11 +133,7 @@ export function BlogListPage() {
 				<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{filteredPosts.map(post => {
 						const readingTime = calculateReadingTime(post.content);
-						const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
-							month: 'short',
-							day: 'numeric',
-							year: 'numeric'
-						});
+						const formattedDate = formatDate(post.date);
 						
 						return (
 							<li key={post.slug} className="flex w-full">
