@@ -4,6 +4,22 @@ import { useMemo, useState } from 'react';
 import { X } from 'lucide-react';
 import { author } from '@/config/author';
 
+// Helper function to fix image paths for GitHub Pages base path
+function fixImagePath(src: string | undefined): string {
+	if (!src) return '';
+	const base = import.meta.env.BASE_URL;
+	// If it's already an absolute URL (http/https) or data URI, return as is
+	if (src.startsWith('http') || src.startsWith('data:')) {
+		return src;
+	}
+	// If it starts with /, prepend base path
+	if (src.startsWith('/')) {
+		return `${base}${src.slice(1)}`;
+	}
+	// Otherwise, assume it's relative and needs base path
+	return `${base}${src}`;
+}
+
 // Calculate reading time (average 200 words per minute)
 function calculateReadingTime(content: string): number {
 	const words = content.split(/\s+/).length;
@@ -50,7 +66,7 @@ export function BlogListPage() {
 		<div className="space-y-8">
 			<div className="flex flex-col items-center text-center space-y-6 py-8">
 				<img
-					src={author.image}
+					src={fixImagePath(author.image)}
 					alt={author.name}
 					className="w-24 h-24 rounded-full object-cover shadow-sm"
 				/>
@@ -121,7 +137,7 @@ export function BlogListPage() {
 										{post.image && (
 											<div className="w-full h-64 overflow-hidden mb-4">
 												<img
-													src={post.image}
+													src={fixImagePath(post.image)}
 													alt={post.title}
 													className="w-full h-full object-cover rounded-lg"
 													loading="lazy"
@@ -147,7 +163,7 @@ export function BlogListPage() {
 											
 											<div className="flex items-center gap-2 pt-2 mt-auto">
 												<img
-													src={author.image}
+													src={fixImagePath(author.image)}
 													alt={author.name}
 													className="w-8 h-8 rounded-full object-cover border border-neutral-200 dark:border-neutral-700"
 												/>

@@ -12,6 +12,22 @@ import { visit } from 'unist-util-visit';
 import type { Root, Paragraph, Image } from 'mdast';
 import { author } from '@/config/author';
 
+// Helper function to fix image paths for GitHub Pages base path
+function fixImagePath(src: string | undefined): string {
+	if (!src) return '';
+	const base = import.meta.env.BASE_URL;
+	// If it's already an absolute URL (http/https) or data URI, return as is
+	if (src.startsWith('http') || src.startsWith('data:')) {
+		return src;
+	}
+	// If it starts with /, prepend base path
+	if (src.startsWith('/')) {
+		return `${base}${src.slice(1)}`;
+	}
+	// Otherwise, assume it's relative and needs base path
+	return `${base}${src}`;
+}
+
 // Remark plugin to unwrap images from paragraphs
 function remarkUnwrapImages() {
 	return (tree: Root) => {
@@ -32,12 +48,7 @@ function remarkUnwrapImages() {
 // Custom components for markdown rendering
 const markdownComponents: Components = {
 	img: ({ src, alt, ...props }) => {
-		// Handle relative image paths - if image doesn't start with http/https or /, 
-		// assume it's in the public folder
-		let imageSrc = src || '';
-		if (imageSrc && !imageSrc.startsWith('http') && !imageSrc.startsWith('/') && !imageSrc.startsWith('data:')) {
-			imageSrc = `/${imageSrc}`;
-		}
+		const imageSrc = fixImagePath(src);
 		
 		return (
 			<figure className="my-8">
@@ -82,7 +93,7 @@ export function BlogPostPage() {
 			<header className="mb-8 space-y-4">
 				{post.image && (
 					<img
-						src={post.image}
+						src={fixImagePath(post.image)}
 						alt={post.title}
 						className="w-full h-64 object-cover rounded-lg border border-neutral-200 dark:border-neutral-800 shadow-sm mb-6"
 						loading="eager"
@@ -100,7 +111,7 @@ export function BlogPostPage() {
 				<div className="flex flex-wrap items-center gap-4 text-sm text-neutral-500">
 					<div className="flex items-center gap-2">
 						<img
-							src={author.image}
+							src={fixImagePath(author.image)}
 							alt={author.name}
 							className="w-8 h-8 rounded-full object-cover border border-neutral-200 dark:border-neutral-700"
 						/>
