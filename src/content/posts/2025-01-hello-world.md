@@ -1,6 +1,6 @@
 ---
 title: Low-Code is Evolving and the Future is Generative
-description: Kicking off the blog with goals and tech stack.
+description: How generative AI and natural language are shaping the next era of low-code solutions
 date: 2025-11-05
 tags: [power platform, generative ai]
 image: /images/copilotstudioinspiration.png
