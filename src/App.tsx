@@ -2,7 +2,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { BlogListPage } from './pages/BlogListPage';
 import { BlogPostPage } from './pages/BlogPostPage';
 import { useEffect, useState } from 'react';
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, Linkedin } from 'lucide-react';
 import { Logo } from './components/Logo';
 
 function useDarkMode(): [boolean, () => void] {
@@ -29,7 +29,9 @@ export default function App() {
 				<div className="container flex items-center justify-between py-4">
 					<Logo />
 					<div className="flex items-center gap-3">
-					<a className="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+					<a className="btn" href="https://linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+						<Linkedin className="w-5 h-5" />
+					</a>
 					<button className="btn" onClick={toggleDark} aria-label="Toggle dark mode">
 						{dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
 					</button>

@@ -48,9 +48,20 @@ export function BlogListPage() {
 
 	return (
 		<div className="space-y-8">
-			<div className="prose dark:prose-invert max-w-none">
-				<h1>Articles</h1>
-				<p>Power Platform, AI, and Data — modern insights and practical guides.</p>
+			<div className="flex flex-col items-center text-center space-y-6 py-8">
+				<img
+					src={author.image}
+					alt={author.name}
+					className="w-24 h-24 rounded-full object-cover shadow-sm"
+				/>
+				<div className="space-y-4">
+					<h1 className="text-3xl md:text-4xl font-bold leading-relaxed pb-2 bg-gradient-to-br from-[#0E6BC8] from-30% via-[#9763D2] to-[#9763D2] dark:from-[#0E6BC8] dark:from-30% dark:via-[#9763D2] dark:to-[#9763D2] bg-clip-text text-transparent">
+						Powered by Björn
+					</h1>
+					<p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+						Power Platform, AI, and Data — modern insights and practical guides.
+					</p>
+				</div>
 			</div>
 
 			{allTags.length > 0 && (
