@@ -123,7 +123,7 @@ export function BlogListPage() {
 												<img
 													src={post.image}
 													alt={post.title}
-													className="w-full h-full object-cover"
+													className="w-full h-full object-cover rounded-lg"
 													loading="lazy"
 												/>
 											</div>
