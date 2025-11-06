@@ -1,11 +1,9 @@
-import { Link } from 'react-router-dom';
+import BackButton from '@/components/BackButton';
 
 export function AboutPage() {
 	return (
 		<div className="prose dark:prose-invert max-w-3xl mx-auto">
-			<Link to="/" className="text-sm text-neutral-500 mb-6 inline-block">
-				← Back
-			</Link>
+			<BackButton to="/" label="Back" className="mb-6" />
 			
 			<h1>About Me</h1>
 			

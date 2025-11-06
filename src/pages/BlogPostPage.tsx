@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getPostBySlug } from '@/content';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -7,6 +7,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrism from 'rehype-prism-plus';
 import { Calendar, Tags } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 import type { Components } from 'react-markdown';
 import { visit } from 'unist-util-visit';
 import type { Root, Paragraph, Image } from 'mdast';
@@ -87,7 +88,7 @@ export function BlogPostPage() {
 			<div className="prose dark:prose-invert max-w-none">
 				<h1>Post not found</h1>
 				<p>
-					<Link to="/">← Back to articles</Link>
+					<BackButton to="/" label="Back to articles" />
 				</p>
 			</div>
 		);
@@ -95,8 +96,8 @@ export function BlogPostPage() {
 
 	return (
 		<article className="prose dark:prose-invert max-w-3xl mx-auto">
-			<p className="text-sm text-neutral-500 mb-6">
-				<Link to="/">← Back</Link>
+			<p className="mb-6">
+				<BackButton to="/" label="Back" />
 			</p>
 			
 			<header className="mb-8 space-y-4">
