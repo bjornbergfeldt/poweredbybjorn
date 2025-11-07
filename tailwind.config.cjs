@@ -10,6 +10,9 @@ module.exports = {
 			fontFamily: {
 				sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial", "sans-serif"],
 			},
+			backgroundColor: {
+				dark: '#111827', // A slightly lighter dark background (equivalent to gray-900)
+			},
 		}
 	},
 	plugins: [

@@ -6,6 +6,14 @@
 	html {
 		scrollbar-gutter: stable;
 	}
+	
+	html.dark {
+		@apply bg-dark text-neutral-100;
+	}
+	
+	html.dark body {
+		@apply bg-dark;
+	}
 }
 
 /* Minimal layout primitives */

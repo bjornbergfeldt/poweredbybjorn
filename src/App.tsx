@@ -25,8 +25,8 @@ export default function App() {
 	}, [location.pathname]);
 
 	return (
-		<div className="min-h-screen">
-			<header className="border-b border-neutral-200 dark:border-neutral-800 sticky top-0 backdrop-blur bg-white/70 dark:bg-neutral-950/60">
+		<div className="min-h-screen bg-white dark:bg-[#141414]">
+			<header className="border-b border-neutral-200 dark:border-neutral-800 sticky top-0 backdrop-blur bg-white/70 dark:bg-[#141414]/60">
 				<div className="container flex items-center justify-between py-4">
 					<Logo />
 					<div className="flex items-center gap-3">

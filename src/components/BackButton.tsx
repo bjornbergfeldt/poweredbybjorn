@@ -16,7 +16,7 @@ export function BackButton({ to = '/', label = 'Back', className = '', iconOnly 
       className={
         `inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-150 no-underline ` +
         `bg-transparent text-neutral-700 border border-neutral-200 shadow-sm hover:bg-neutral-200 ` +
-        `dark:bg-transparent dark:text-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-700 ` +
+        `dark:bg-transparent dark:text-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-600 ` +
         `${className}`
       }
       aria-label={label}

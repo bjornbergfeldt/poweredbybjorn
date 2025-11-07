@@ -81,7 +81,7 @@ export function BlogListPage() {
 				/>
 				<div className="space-y-4">
 					<h1 className="text-3xl md:text-4xl font-bold leading-relaxed pb-2 bg-gradient-to-br from-[#0E6BC8] from-30% via-[#9763D2] to-[#9763D2] dark:from-[#0E6BC8] dark:from-30% dark:via-[#9763D2] dark:to-[#9763D2] bg-clip-text text-transparent">
-						Powered by Björn
+						Power Insights
 					</h1>
 					<p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
 						Curiosity-driven. Experiment-focused. Insight-packed. Exploring Power Platform, AI, and Data, one idea at a time.
